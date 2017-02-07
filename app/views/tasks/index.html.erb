@@ -1,11 +1,21 @@
+<div class="container">
 <h1>Tasks to be done</h1>
+</div>
 
-<h2><%= link_to "Add a new task", new_task_path %></h2>
+<div class="container">
+  <h2><%= link_to "Add a new task", new_task_path %></h2>
+</div>
 
-<% @tasks.each do |task| %>
-  <h3><%= task.name %></h3>
-  <p><%= link_to "See task", task_path(task) %></p>
-  <p><%= link_to "Edit task", edit_task_path(task) %></p>
-  <p><%= link_to "Delete task", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @tasks.each do |task| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <h3><%= task.name %></h3>
+        <p><%= link_to "See task", task_path(task) %></p>
+        <p><%= link_to "Edit task", edit_task_path(task) %></p>
+        <p><%= link_to "Delete task", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
