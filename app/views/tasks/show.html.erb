@@ -1,0 +1,4 @@
+<h1><%= @task.name %></h1>
+<p>Created: <%= @task.created_at.strftime("%b %e, %l:%M %p") %></p>
+<p>Updated: <%= @task.updated_at.strftime("%b %e, %l:%M %p") %></p>
+<%= link_to "Back to tasks list", tasks_path %>
